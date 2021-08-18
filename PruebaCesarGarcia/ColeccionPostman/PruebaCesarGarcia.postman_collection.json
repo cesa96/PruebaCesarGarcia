@@ -1,0 +1,108 @@
+{
+  "info": {
+    "_postman_id": "c19b8a6d-75b2-4167-b48c-948a2657ce77",
+    "name": "PruebaCesarGarcia",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "CrearFacturas",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"numeroFactura\":\"101\",\r\n\"fechaFactura\":\"2021-08-20\",\r\n\"tipoPago\":\"Contado\",\r\n\"documentoCliente\":\"123456789\",\r\n\"nombreCliente\":\"Cliente Prueba\",\r\n\"subTotal\":10000,\r\n\"iva\":19,\r\n\"totalImpuesto\":1900,\r\n\"total\":11900,\r\n\"lineas\":[\r\n    {\r\n        \"idProducto\":1,\r\n        \"cantidad\":12\r\n    },\r\n    {\r\n        \"idProducto\":2,\r\n        \"cantidad\":8\r\n    }\r\n]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://localhost:44383/api/Facturas",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "44383",
+          "path": [
+            "api",
+            "Facturas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CrearProducto",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nombreProducto\": \"Esto es otro producto 8\"\r\n}   ",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://localhost:44383/api/Productos",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "44383",
+          "path": [
+            "api",
+            "Productos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GEtFacturas",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:44383/api/Facturas",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "44383",
+          "path": [
+            "api",
+            "Facturas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get productos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:44383/api/Productos/2",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "44383",
+          "path": [
+            "api",
+            "Productos",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
